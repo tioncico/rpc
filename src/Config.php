@@ -39,11 +39,12 @@ class Config
         return $this->ipWhiteList;
     }
 
-    function setIpWhiteList():IpWhiteList
+    function setIpWhiteList(ipWhiteList $ipWhiteList):IpWhiteList
     {
-        if(empty($this->ipWhiteList)){
-            $this->ipWhiteList = new IpWhiteList();
+        if(empty($ipWhiteList)){
+            $ipWhiteList= new IpWhiteList();
         }
+        $this->ipWhiteList = $ipWhiteList;
         return $this->ipWhiteList;
     }
 
